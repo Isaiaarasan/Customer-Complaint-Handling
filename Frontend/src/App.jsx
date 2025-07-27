@@ -12,6 +12,7 @@ import MyComplaints from './pages/MyComplaints';
 import AdminComplaints from './pages/AdminComplaints';
 import api, { parseJwt } from './api';
 import { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [auth, setAuth] = useState({ isAuthenticated: false, roles: [], username: '' });

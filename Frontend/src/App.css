@@ -1,3 +1,17 @@
+/* Root theme variables for Material UI look */
+:root {
+  --primary: #1976d2;
+  --secondary: #009688;
+  --success: #4caf50;
+  --card-bg: #fff;
+  --card-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+/* General layout */
+body {
+  background-color: #f8fafc;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,6 +19,98 @@
   text-align: center;
 }
 
+/* Headings */
+h2, h3, h4 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Navbar branding */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Container spacing and responsiveness */
+.container {
+  margin-top: 2rem;
+  max-width: 900px;
+}
+
+/* Card style for Material look */
+.card {
+  background: var(--card-bg) !important;
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 2rem;
+  padding: 2em;
+}
+
+/* Elevated button style */
+.btn {
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.08);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+/* Bootstrap button overrides */
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #fff !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #1565c0 !important;
+  border-color: #1565c0 !important;
+}
+
+.btn-secondary {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #fff !important;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #00796b !important;
+  border-color: #00796b !important;
+}
+
+.btn-success {
+  background-color: var(--success) !important;
+  border-color: var(--success) !important;
+  color: #fff !important;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: #388e3c !important;
+  border-color: #388e3c !important;
+}
+
+/* Form label style */
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Form control style */
+.form-control, .form-select {
+  border-radius: 6px;
+  border: 1px solid #e0e3e7;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
+}
+
+/* Misc */
+.read-the-docs {
+  color: #888;
+}
+
+/* Logo animation (if used) */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -19,39 +125,11 @@
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* App custom styles */
-body {
-  background-color: #f8fafc;
-}
-
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-/* Add spacing for dashboard containers */
-.container {
-  margin-top: 2rem;
 }
